@@ -1,7 +1,9 @@
-Mastering the Android Touch System
+Mastering the Android Touch System (1)
 ===================================
 
----------------
+如果还对Android View Touch System有疑惑，那么一定要看这个[视频](https://www.youtube.com/watch?v=EZAoJU-nUyI)，
+示例工程在[这里](https://github.com/devunwired/custom-touch-examples)
+
 How Android Handles Touches
 ---------------
 * Events start at the Activity with `dispatchTouchEvent()`
@@ -76,6 +78,24 @@ Custom Touch Handling
     * `getScaledPagingTouchSlop()`  
       -Touch slop used for a horizontal paging gesture (i.e. ViewPager)  
     * Display values scaled for each device's density
+
+```
+代码片段：
+在CustomFrameLayout中有Button，FrameLayout需要判断何时开始滑动Children，何时需要Children
+自己处理事件。
+switch(event.getAction()) {
+  case MotionEvent.ACTION_MOVE:
+      final float x = event.getX();
+      final float y = event.getY();
+      final int yDiff = (int) Math.abs(y - mInitialY);
+      final int xDiff = (int) Math.abs(x - mInitialX);
+      if(yDiff > mTouchSlop || xDiff > mTouchSlop) {
+      return true;
+    }
+    break;
+}
+
+```
 
 * Forwarding touch events
     * Call target's `dispatchTouchEvent()`
