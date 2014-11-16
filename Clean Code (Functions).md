@@ -89,4 +89,6 @@ public boolean checkPassword(String userName, String password) {
 还可以使用派生的异常类来避免不断增加的错误码。
 
 ## 不要重复自己(DRY)
-DRY是编程中的一项基本准则，从函数的角度来看，所有重复的代码都应该封装成函数。
+DRY是编程中的一项基本准则，从函数的角度来看，所有重复的代码都应该封装成函数。  
+在代码上的重复现在已经基本没有了，但是Android资源上经常一懒就重复了，比如Color、Dimen之类的定义
+并没有放入Values.
