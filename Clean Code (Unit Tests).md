@@ -36,3 +36,26 @@
 确保测试总是有布尔值输出。不应该通过查看日志来确认测试是否通过。不应该手动对比文本文件来确认测试是否通过。
 * **及时(Timely)**
 测试应及时编写。单元测试应该恰好在使其通过的生产代码之前编写。
+
+## Given-When-Then
+可以通过given-when-then约定让测试更可读。
+```
+public void testGetPageHierarchyAsXml() throws Exception {
+    givenPages("PageOne", "PageOne.ChildOne", "PageTwo");
+
+    whenRequestIsIssued("root", "type:pages");
+
+    thenResponseShouldBeXML();
+  }
+
+  public void testGetPageHierarchyHasRightTags() throws Exception {
+    givenPages("PageOne", "PageOne.ChildOne", "PageTwo");
+
+    whenRequestIsIssued("root", "type:pages");
+
+    thenResponseShouldContain(
+      "<name>PageOne</name>", "<name>PageTwo</name>", "<name>ChildOne</name>"
+    );
+  }
+```
+
