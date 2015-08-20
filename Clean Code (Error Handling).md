@@ -1,10 +1,9 @@
 # Clean Code (Error Handling)
 
 ## Use Exceptions Rather Than Return Codes
-```
-public class DeviceController {
 Error Codes:
 ```
+public class DeviceController {
   public void sendShutDown() {
     DeviceHandle handle = getHandle(DEV1);
     // Check the state of the device
@@ -26,6 +25,7 @@ Error Codes:
   ...
 }
 ```
+
 Exceptions:
 ```
 public class DeviceController {
@@ -59,16 +59,21 @@ public class DeviceController {
 ## Use Unchecked Exceptions
 Unchecked Exceptions可以理解为Runtime Exception，无需显式捕获。  
 Checked Exception的缺点在于它**违背了开闭原则**。
+
 > 如果你在方法中抛出可控异常，而catch语句在几个层级之上，**你就得再catch语句和抛出
 > 异常处之间的每个方法签名中声明该异常。**这意味着对软件中较低层级的修改，都将波及
 > 更高层级的签名。
+
 其实关于Checked, Unchecked Exception的讨论一直存在，我看到个比较好的评论：
+
 > However, I think checked exceptions are useful - they are used when you want to force the user of your API to think how to 
 > handle the exceptional situation (if it is recoverable). It's just that checked exceptions are overused in the Java platform,
 > which makes people hate them.
+
 具体可以参看这个StackOverFlow上的讨论,[Java: checked vs unchecked exception explanation](http://stackoverflow.com/questions/6115896/java-checked-vs-unchecked-exception-explanation)
 
 ## Define Exception Classes in Terms of a Caller’s Needs
+
 对错误的分类可以依据来源、类型(设备、网络、编程)等。但最重要的是考虑**它们如何被捕获**。
 打包第三方API的技巧：
 ```
