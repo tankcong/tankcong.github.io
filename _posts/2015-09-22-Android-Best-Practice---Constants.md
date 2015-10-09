@@ -1,3 +1,8 @@
+---
+layout: default
+title: Consider static factory method
+---
+
 ### Notes: [Consider static factory method](https://medium.com/@orhanobut/consider-static-factory-method-8c0d4eaa5e73)
 以下代码在日常开发中经常遇见：
 
