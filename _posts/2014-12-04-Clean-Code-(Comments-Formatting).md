@@ -1,7 +1,19 @@
+---
+layout: post
+title: Clean Code (Comments, Formatting)
+author: 聪记
+header-img: img/post_header_universe.jpg
+tags: 
+    - Notes
+    - Clean Code
+---
+
 # Clean Code (Comments, Formatting)
 
 ## Comments
+
 ### Comments Do Not Make Up for Bad Code
+
 ### Explain Yourself in Code
 
 > 代码才是唯一真正准确的信息来源。注释的恰当用法是弥补我们在用代码表达意图时的失败。  
@@ -10,10 +22,12 @@
 ### 值得写的注释
 * 法律信息
 * 提供信息的注释  
+
 ```
 // format matched kk:mm:ss EEE, MMM dd, yyyy
 ```
 * 对意图的解释  
+
 ```
 // This is our best attempt to get a race condition 
 // by creating large number of threads.
@@ -22,16 +36,19 @@
 把难懂的参数或返回值翻译为可读的形式。
 
 * 警示  
+
 ```
 // SimpleDateFormat is not thread safe.
 ```
 * TODO  
 TODO注释定期查看、及时清理，比如IDE里自动生成的  
+
 ```
 // TODO Auto-generated catch block
 ```
 * 放大  
 放大某处看似不合理之处的重要性  
+
 ```
 // the trim is real important. It removes the starting spaces that
 // could cause the item to be recognized as another list.

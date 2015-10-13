@@ -1,8 +1,20 @@
+---
+layout: post
+title: Clean Code (Functions)
+author: 聪记
+header-img: img/post_header_universe.jpg
+tags: 
+    - Notes
+    - Clean Code
+---
+
 # Clean Code (Functions)
 [《Clean Code》](http://book.douban.com/subject/3032825/) Book Notes. Chapter *Functions*
 
 语录摘抄再前面，Chapter 3, Section 12
+
 ## 如何写出好的函数
+
 > &emsp;&emsp;Writing software is like any other kind of writing. When you write a paper or
 > an article, you get your thoughts down first, then you massage it until it reads
 > well. The first draft might be clumsy and disorganized, so you wordsmith it and
@@ -19,11 +31,12 @@
 
 一句话，好代码是改出来的。
 
-## 小，只做一件事，一个抽象级(Small, Do One Thing, One Level of Abstraction per Function)
+## 小，只做一件事，一个抽象级(Small, Do One Thing, One Level of Abstraction per Function)  
 三节综合在一起。每个函数确保**只做一件事, 做好这件事**，函数内的方法确保在**一个抽象级**，结果会自然引出
 函数体**短小**。  
 这里涉及到对抽象级的理解。比方说要完成A工作的工序是b()->c()->d()，那么b()、c()、d()就算同一
 抽象级，同理，b()、c()、d()中也按照抽象级不断拆分，直至足够细分短小。
+
 ```
 protected void init() {
     initDatas();
@@ -35,9 +48,8 @@ private void initDatas() {
     readPreferences();
     requestData();
 }
-
-...
 ```
+
 **向下规则**，每个函数后面都跟着位于下一抽象层级的函数（每个函数都描述当前抽象层级），这样在查
 看函数列表时，就能遵循抽象层级向下阅读。
 
@@ -50,6 +62,7 @@ private void initDatas() {
 适当使用长名称。长而具有描述性的名称，要比短而令人费解的名称好。长而具有描述性的名称，要比描述性的
 长注释好。使用某种命名约定，让函数名称中的多个单词容易阅读，然后使用这些单词给函数取个能说清其
 公用的名称。
+
 ```
 includeSetupAndTeardownPages
 includeSetupPages
@@ -63,6 +76,7 @@ includeSuiteSetupPage
 避免将Bool值作为一元函数的参数没因为这会使函数不止做一件事。True这样做，False那样做。`render(boolean isSuite)`
 可以拆分优化为`renderForSuite()`和`renderForSingleTest()`  
 如果函数看起来需要三个或更多参数，就说明其中一些参数应该**封装为类**了。
+
 ```
 Circle makeCircle(double x, double y, double radius);
 Circle makeCircle(Point center, double radius);
@@ -70,6 +84,7 @@ Circle makeCircle(Point center, double radius);
 
 ## 无副作用 (Have No Side Effects)
 注意函数中可能被隐藏起来的事。
+
 ```
 public boolean checkPassword(String userName, String password) {
     // do something verification

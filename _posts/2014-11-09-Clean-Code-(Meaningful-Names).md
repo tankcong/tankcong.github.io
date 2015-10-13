@@ -1,3 +1,13 @@
+---
+layout: post
+title: Clean Code (Meaningful Names)
+author: 聪记
+header-img: img/post_header_universe.jpg
+tags: 
+    - Notes
+    - Clean Code
+---
+
 # Clean Code (Meaningful Names)
 [《Clean Code》](http://book.douban.com/subject/3032825/) Book Notes. Chapter *Meaningful
 Names*
@@ -29,6 +39,7 @@ public List<int[]> getThem() {
 }
 ```
 GOOD NAMES:
+
 ```
 public List<Cell> getFlaggedCells() {
     List<Cell> flaggedCells = new ArrayList<Cell>();
@@ -44,11 +55,13 @@ public List<Cell> getFlaggedCells() {
 
 ## 避免误导(Avoid DisInformation)
 BAD NAMES:
+
 ```
 accountList
 XYZControllerForEfficientHandlingOfStrings, XYZControllerForEfficientStorageOfStrings
 ```
 GOOD NAMES:
+
 ```
 accountGroup, accounts //避免在名字中带有具体类型(List, Map...), 产生**误导**
 XYZ.. //名字太像容易导致混淆
@@ -59,12 +72,16 @@ XYZ.. //名字太像容易导致混淆
 `accountData`与`account`, `customerInfo`与`customer`都无区别。
 
 ## 使用可读、可搜索的名字(Use Pronounceable Searchable Name)
+
+```
 final static int WORK_DAYS_PER_WEEK = 5;
+```
 
 ## 类名、方法名
-Class Names should usually be Nouns or None Phrases.  
-Method names should usually be Verbs or Verb Phrases.  
-Use domain names.
+
+* Class Names should usually be Nouns or None Phrases.  
+* Method names should usually be Verbs or Verb Phrases.  
+* Use domain names.
 
 附：[Google Java Style#Naming](http://google.github.io/styleguide/javaguide.html#s5-naming)
 

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Mastering the Android Touch System (1)
+author: 聪记
+header-img: img/post_header_universe.jpg
+tags: 
+    - Android
+---
+
 Mastering the Android Touch System (1)
 ===================================
 
@@ -54,7 +63,6 @@ How Android Handles Touches
  for the duration of the current gesture.  
     * Flag is reset by framework on each new gesture(ACTION_DOWN)  
 
----------------
 Custom Touch Handling
 ---------------
 * Handling touch events
@@ -112,18 +120,17 @@ switch(event.getAction()) {
       -`onInterceptTouchEvent()` will no longer be called for each event (one-shot redirect)
     * Any current target will receive ACTION_CANCEL
 
----------------
 Custom Touch Handling Warning
 ---------------
- * Call through to super whenever possible
+* Call through to super whenever possible
     * `View.onTouchEvent()` does a LOT of state management(pressed, chcked, etc.) that
   you will lose if you capture every touch
- * Protect ACTION_MOVE with slop checks
+* Protect ACTION_MOVE with slop checks
     * Fingers are fat and twitchy
- * Always Handle ACTION_CANCEL
+* Always Handle ACTION_CANCEL
     * Container views with action (like scrolling) will steal events and you will
       likely need to reset state
     * Remember after CANCEL, you will get nothing else
- * Don't intercept events until you're ready to take them all.
+* Don't intercept events until you're ready to take them all.
     * Intercept cannot be reversed until the next gesture.
 

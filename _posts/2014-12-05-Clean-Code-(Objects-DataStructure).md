@@ -1,8 +1,19 @@
+---
+layout: post
+title: Clean Code (Objects, DataStructure)
+author: 聪记
+header-img: img/post_header_universe.jpg
+tags: 
+    - Notes
+    - Clean Code
+---
+
 # Clean Code (Objects, DataStructure)
 
 ## Objects, Data Structure
 尽可能的**隐藏实现**，以抽象形态表述数据。避免盲目增加Getter/Setter暴露实现细节。  
 数据结构：
+
 ```
 public class Point {
     public double x;
@@ -14,7 +25,9 @@ public interface Vehicle {
     double getGallonsOfGasoline();
 }
 ```
+
 对象：
+
 ```
 public interface Point {
     double getX();
@@ -29,12 +42,14 @@ public interface Vehicle {
     double getPercentFuelRemaining();
 }
 ```
+
 注意对象与数据结构的差异。**对象把数据隐藏于抽象之后，暴露操作数据的函数。数据结构
 暴露其数据，没有提供有意义的函数。**
 
 ## Data/Object Anti-Symmetry
 考虑下面两段代码：  
 Procedural code(Data Structure)
+
 ```
 public class Square {
   public Point topLeft;
@@ -74,7 +89,9 @@ public class Geometry {
   }
 }
 ```
+
 Object oriented code(OO)
+
 ```
 public class Square implements Shape {
   private Point topLeft;
@@ -108,6 +125,7 @@ public class Circle implements Shape {
 修改`Geometry`中的所有函数来处理它。  
 `area()`方法是多态的，新增形状对现有函数不产生影响。但若`Shape`添加新函数，
 则所有形状都得做修改。
+
 > **过程式代码（使用数据结构的代码）便于在不改动既有数据结构的前提下添加新函数。
 > 面向对象代码便于在不改动既有函数的前提下添加新类。**
 

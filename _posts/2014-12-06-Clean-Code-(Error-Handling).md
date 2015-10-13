@@ -1,7 +1,18 @@
+---
+layout: post
+title: Clean Code (Error Handling)
+author: 聪记
+header-img: img/post_header_universe.jpg
+tags: 
+    - Notes
+    - Clean Code
+---
+
 # Clean Code (Error Handling)
 
 ## Use Exceptions Rather Than Return Codes
 Error Codes:
+
 ```
 public class DeviceController {
   public void sendShutDown() {
@@ -27,6 +38,7 @@ public class DeviceController {
 ```
 
 Exceptions:
+
 ```
 public class DeviceController {
   ...
@@ -56,6 +68,7 @@ public class DeviceController {
   ...
 }
 ```
+
 ## Use Unchecked Exceptions
 Unchecked Exceptions可以理解为Runtime Exception，无需显式捕获。  
 Checked Exception的缺点在于它**违背了开闭原则**。
@@ -76,6 +89,7 @@ Checked Exception的缺点在于它**违背了开闭原则**。
 
 对错误的分类可以依据来源、类型(设备、网络、编程)等。但最重要的是考虑**它们如何被捕获**。
 打包第三方API的技巧：
+
 ```
     ACMEPort port = new ACMEPort(12);
 
@@ -95,6 +109,7 @@ Checked Exception的缺点在于它**违背了开闭原则**。
     }
 ```
 打包为：
+
 ```
 public class LocalPort {
   private ACMEPort innerPort;
@@ -117,7 +132,9 @@ public class LocalPort {
   ...
 }
 ```
+
 最终的调用像这样：
+
 ```
     LocalPort port = new LocalPort(12);
     try {
@@ -132,4 +149,5 @@ public class LocalPort {
 这样的好处显而易见，降低了对某特定API的依赖，可以相对简单的替换第三方API。
 
 ## Do NOT Return Null
+
 ## Do NOT Pass Null

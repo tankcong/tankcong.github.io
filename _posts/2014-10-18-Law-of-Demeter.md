@@ -1,3 +1,12 @@
+---
+layout: post
+title: Law of Demeter
+author: 聪记
+header-img: img/post_header_universe.jpg
+tags: 
+    - Java
+---
+
 Law of Demeter
 =====================
 [《程序员修炼之道》](http://book.douban.com/subject/1152111/)

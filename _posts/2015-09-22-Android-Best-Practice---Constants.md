@@ -5,6 +5,7 @@ author: 聪记
 header-img: img/post_header_universe.jpg
 tags: 
     - Java
+    - Android
 ---
 
 ### Notes: [Consider Static Factory Method](https://medium.com/@orhanobut/consider-static-factory-method-8c0d4eaa5e73)

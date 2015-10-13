@@ -1,3 +1,13 @@
+---
+layout: post
+title: Clean Code (Unit Tests)
+author: 聪记
+header-img: img/post_header_universe.jpg
+tags: 
+    - Notes
+    - Clean Code
+---
+
 # Unit Tests
 个人最感兴趣的一章，因为我**从没**写过单 元 测 试。。。。现在甚至想把书中的每个字都搬到这里来。
 做外包项目节奏太快，无奈。。。有机会一定要在项目中尝试一次敏捷。  
@@ -18,6 +28,7 @@
 保持30秒一个循环。测试与生产代码**一起**编写，测试只比生产代码早写几秒钟。
 
 ## Keeping Tests Clean
+
 > **Test code is just as important as production code.**
 > It is not a second-class citizen. It requires thought, design, and care. It must be kept as clean as production code. 
 
@@ -26,6 +37,7 @@
 
 ## F.I.R.S.T.
 整洁测试的五条规则：
+
 * **快速(FAST)**
 测试运行的够快，确保能够频繁运行。
 * **独立(Independent)**
@@ -39,6 +51,7 @@
 
 ## Given-When-Then
 可以通过given-when-then约定让测试更可读。
+
 ```
 public void testGetPageHierarchyAsXml() throws Exception {
     givenPages("PageOne", "PageOne.ChildOne", "PageTwo");

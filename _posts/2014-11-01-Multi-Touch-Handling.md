@@ -1,3 +1,12 @@
+---
+layout: post
+title: Mastering the Android Touch System (2)
+author: 聪记
+header-img: img/post_header_universe.jpg
+tags: 
+    - Android
+---
+
 # Mastering the Android Touch System (2）
 
 如果还多Android View Touch System有疑惑，那么一定要看这个[视频](https://www.youtube.com/watch?v=EZAoJU-nUyI)，
