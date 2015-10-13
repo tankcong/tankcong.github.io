@@ -1,9 +1,64 @@
+# Site settings
+title: 聪记 | tankcong
+SEOTitle: 聪记的博客 | tankcong Blog
+header-img: img/bg_home_01.jpg
+email: chad.tankcong@gmail.com
+description: "一万年太久，只争朝夕"
+keyword: "聪记, tankcong, 个人网站, 博客, blog, android, java, 安卓"
+baseurl: ""
+author: 聪记
+url: "http://tankcong.com"
+
+
+# SNS settings
+RSS: false
+github_username:    tankcong
+weibo_username:     聪记好
+#zhihu_username:     huxpro
+#twitter_username:  huxpro
+#facebook_username:  huxpro
+
+
+# Build settings
 highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions:
-    - fenced_code_blocks
-    - no_intra_emphasis
-    - strikethrough
-    - autolink
-    - tables
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true      # if you want to customize anchor. check out line:129 of `post.html`
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM        # use Github Flavored Markdown !important
+
+
+# Duoshuo settings
+# please set your own DuoShuo account in `post.html` and `about.html`
+# seeing the Share component is depend on Comment so we can NOT use share only.
+useDuoshuo: true    # use both Comment and Share
+useShare: true      # set to false if you want to use Comment only
+
+
+
+# Todo: Analysis settings
+# Please set your own analysis account in `head.html`(Baidu) and `default.html`(QQ)
+useBaiduAnalysis: true
+useTencentAnalysis: true
+useGoogleAnalysis: true     # TODO
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "一万年太久，只争朝夕"
+sidebar-avatar: /img/avatar_tankcong.jpg     # use absolute URL.
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value 
+
+# Friends
+#friends: [
+#]

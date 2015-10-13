@@ -1,3 +1,12 @@
+---
+layout: post
+title: Kinds of Coupling
+author: 聪记
+header-img: img/post_header_universe.jpg
+tags: 
+    - Java
+---
+
 Kinds of Coupling
 =====================
 看到Code Complete里对常见Coupling种类有很好的划分：

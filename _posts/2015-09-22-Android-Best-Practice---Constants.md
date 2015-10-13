@@ -1,9 +1,13 @@
 ---
-layout: default
-title: Consider static factory method
+layout: post
+title: Consider Static Factory Method
+author: 聪记
+header-img: img/post_header_universe.jpg
+tags: 
+    - Java
 ---
 
-### Notes: [Consider static factory method](https://medium.com/@orhanobut/consider-static-factory-method-8c0d4eaa5e73)
+### Notes: [Consider Static Factory Method](https://medium.com/@orhanobut/consider-static-factory-method-8c0d4eaa5e73)
 以下代码在日常开发中经常遇见：
 
 ```
