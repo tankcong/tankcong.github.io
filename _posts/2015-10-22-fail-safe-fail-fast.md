@@ -23,17 +23,20 @@ tags:
 > modification of an object when such modification is not permissible.  
 
 `ArrayList`[SourceCode](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/util/ArrayList.java#ArrayList):
+
 ```
 final void checkForComodification() {
     if (modCount != expectedModCount)
         throw new ConcurrentModificationException();
 }
 ```
+
 其中`modCount`是当前List Size，`expectedModCount`是`Iterator`创建时的Size，每次调用`Iterator.next()`时都会调用
 `checkForComodification`。所以只要任何一个线程(包括当前线程)在遍历时修改了List大小都会抛出
 此异常。
 
 `ArrayList.iterator()`的JavaDoc:
+
 ```
 Returns an iterator over the elements in this list in proper sequence.
 The returned iterator is fail-fast.
@@ -51,6 +54,7 @@ The returned iterator is fail-fast.
 > the list since the iterator was created.
 
 再看下`CopyOnWriteArrayList.add()`，[SourceCode](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/util/concurrent/CopyOnWriteArrayList.java#CopyOnWriteArrayList.add%28java.lang.Object%29):
+
 ```
 public void add(int index, E element) {
      Object[] elements = getArray();
@@ -69,5 +73,6 @@ public void add(int index, E element) {
          setArray(newElements);
  }
 ```
+
 很明显，修改集合值的时候，先复制了一份新的元素集合，当在新的元素集合修改完之后再修改原集合。
 原集合在省城`Iterator`的时候已经保存，所以并不会观察到新的修改。代价是不能保证数据的一致性，同时引入了额外的内存开销。
