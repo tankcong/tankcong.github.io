@@ -1,11 +1,11 @@
 ---
 layout: post
-title: KISS Principle
+title: Cold Observable / Hot Observable
 author: 聪记
 header-img: img/post_header_universe.jpg
-tags:
-    -- JAVA
-    -- RxJava
+tags: 
+    - JAVA
+    - RxJava
 ---
 
 ## Cold Observable / Hot Observable

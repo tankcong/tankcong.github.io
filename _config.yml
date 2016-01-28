@@ -9,12 +9,14 @@ baseurl: ""
 author: 聪记
 url: "http://tankcong.com"
 
+#gems
+gems: [jekyll-paginate]
 
 # SNS settings
 RSS: false
 github_username:    tankcong
 weibo_username:     聪记好
-#zhihu_username:     huxpro
+zhihu_username:     huxpro
 #twitter_username:  huxpro
 #facebook_username:  huxpro
 
@@ -45,13 +47,13 @@ useShare: true      # set to false if you want to use Comment only
 
 # Todo: Analysis settings
 # Please set your own analysis account in `head.html`(Baidu) and `default.html`(QQ)
-useBaiduAnalysis: true
+useBaiduAnalysis: false
 useTencentAnalysis: true
 useGoogleAnalysis: true     # TODO
 
 
 # Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
+sidebar: true                          # whether or not using Sidebar.
 sidebar-about-description: "一万年太久，只争朝夕"
 sidebar-avatar: /img/avatar_tankcong.jpg     # use absolute URL.
 

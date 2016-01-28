@@ -4,7 +4,7 @@ title: KISS Principle
 author: 聪记
 header-img: img/post_header_universe.jpg
 tags:
-    -- JAVA
+    - JAVA
 ---
 
 ## KISS Principle
