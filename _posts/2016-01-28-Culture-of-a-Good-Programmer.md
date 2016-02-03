@@ -4,7 +4,8 @@ title: SpeakerDeck, culture of a good programmer
 author: 聪记
 header-img: img/post_header_universe.jpg
 tags: 
-    - JAVA
+    - Java
+    - SpeakerDeck
     - RxJava
 ---
 
