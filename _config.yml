@@ -16,9 +16,6 @@ gems: [jekyll-paginate]
 RSS: false
 github_username:    tankcong
 weibo_username:     聪记好
-zhihu_username:     huxpro
-#twitter_username:  huxpro
-#facebook_username:  huxpro
 
 
 # Build settings
