@@ -34,4 +34,4 @@ tags:
 <img src="http://www.tankcong.com/img/in-post/trace.png"/>  
 
 Got so much work to do..  
-I'll write anothers blog when I finish doing this alerts.
+I'll write anothers blog when I finish doing these alerts.
