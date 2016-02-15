@@ -30,7 +30,6 @@ tags:
 
 ### Current Progress
 
-[trace.html](http://www.tankcong.com/attach/trace.html)
 <img src="http://www.tankcong.com/img/in-post/trace.png"/>  
 
 Got so much work to do..  
