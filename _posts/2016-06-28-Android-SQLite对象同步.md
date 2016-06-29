@@ -68,15 +68,15 @@ private final DatabaseReentrantLock mLock = new DatabaseReentrantLock(true);
    >>  E/SQLiteDatabase(7851): Failed to open the database. closing it.
    >>  E/SQLiteDatabase(7851): android.database.sqlite.SQLiteDatabaseLockedException: database is locked
    ```
-   程序异常退出；
+   **程序异常退出**；
 
 2. 若在插入数据时冲突，则只报:
    ```
-    01-24 14:16:22.211: E/SQLiteDatabase(8419): Error inserting data=4 name=test name
-    01-24 14:16:22.211: E/SQLiteDatabase(8419): android.database.sqlite.SQLiteDatabaseLockedException: database is locked
-    01-24 14:16:22.211: E/SQLiteDatabase(8419):  at android.database.sqlite.SQLiteStatement.native_executeSql(Native Method)
+    E/SQLiteDatabase(8419): Error inserting data=4 name=test name
+    E/SQLiteDatabase(8419): android.database.sqlite.SQLiteDatabaseLockedException: database is locked
+    E/SQLiteDatabase(8419):  at android.database.sqlite.SQLiteStatement.native_executeSql(Native Method)
    ```
-   程序不退出，更新数据失败；
+   **程序只会在日志输出错误，并且更新数据失败，应用得不到任何通知**；
 
 
 ### 结论
