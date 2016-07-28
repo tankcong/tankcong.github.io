@@ -1,42 +1,151 @@
----
-layout: page
-description: "too young"
----
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <title>Demo</title>
+            <script>
+                //方法
+                function loginAction () {
+                    setupWebViewJavascriptBridge(function(bridge) {
+                                                 bridge.callHandler('login',
+                                                                    {
+                                                                    'blogURL': 'http://www.henishuo.com',
+                                                                    'actionName':'login'
+                                                                    },
+                                                                    function responseCallback(responseData) {
+                                                                    console.log("JS received response:", responseData)
+                                                                    })
+                                                 })
+                }
+            
+            function pushTabbar () {
+                setupWebViewJavascriptBridge(function(bridge) {
+                                             bridge.callHandler('tabbar',
+                                                                {
+                                                                'tab': '1',
+                                                                'actionName':'tabbar'
+                                                                },
+                                                                function responseCallback(responseData) {
+                                                                console.log("JS received response:", responseData)
+                                                                })
+                                             });
+                
+                window.AndroidBridge.callback('webview msg')
+            }
+            
+            function pushSubViewController () {
+                setupWebViewJavascriptBridge(function(bridge) {
+                                             bridge.callHandler('push',
+                                                                {
+                                                                'detailID': '1123123',
+                                                                'actionName':'push'
+                                                                },
+                                                                function responseCallback(responseData) {
+                                                                console.log("JS received response:", responseData)
+                                                                })
+                                             })
+            }
+            function showToast () {
+                setupWebViewJavascriptBridge(function(bridge) {
+                                             bridge.callHandler('showToast',
+                                                                {
+                                                                'message': 'JS 调用 OC 提示',
+                                                                'actionName':'showToast'
+                                                                },
+                                                                function responseCallback(responseData) {
+                                                                console.log("JS received response:", responseData)
+                                                                })
+                                             })
+                                             
+            }
+            
+            function payAction () { // 支付的时候  一般拿到订单列表是去native
+                setupWebViewJavascriptBridge(function(bridge) {
+                                             bridge.callHandler('pay',
+                                                                {
+                                                                'orderID': '1312312312',
+                                                                'actionName':'pay'
+                                                                },
+                                                                function responseCallback(responseData) {
+                                                                console.log("JS received response:",  responseData)
+                                                                //  根据返回做操作
+                                                                 alert(responseData['data']['message']);
+                                                                })
+                                             })
+                                             
+            }
+            
+                </script>
+    </head>
+    <body>
+        <h1>实际项目中 JS 与 iOS 的交互事件</h1>
+        <br/>
+        <br/>
+        <br/>
+        
+        <p>1.网页中需要用户UserID ,token  JS调用 原生的登录事件</p>
+        <button id="login" onclick="loginAction()">登录</button>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
+        <p>2.JS 调用OC 回到 Tabbar </p>
+        <button id="tabbar" onclick="pushTabbar()">tabbar</button>
+        <br/>
+        <br/>
+        <br/>
+        
+        <p>3.跳转到某些子界面</p>
+        <button id="push" onclick="pushSubViewController()">pushSubViewController</button>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
+        <p>4. 弹出一个提示框</p>
+        <button id="showToast" onclick="showToast()">显示提示</button>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
+        <p>5.网页订单调用原生支付界面 完成支付回调支付结果</p>
+        <button id="pay" onclick="payAction()">调用支付</button>
+        <br/>
+        <br/>
+        <br/>
+        <script>
+            //        init JS  //固定写法
+            window.onerror = function(err) {
+                log('window.onerror: ' + err)
+            }
+        
+        function setupWebViewJavascriptBridge(callback) {
+            if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+            if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+            window.WVJBCallbacks = [callback];
+            var WVJBIframe = document.createElement('iframe');
+            WVJBIframe.style.display = 'none';
+            WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+            document.documentElement.appendChild(WVJBIframe);
+            setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+        }
+        setupWebViewJavascriptBridge(function(bridge) {
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
-{% endfor %}
+        //JS 注册一个方法  OC 调用
+        bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
+                               var responseData = { 'Javascript Says':'Right back atcha!' }
+                               responseCallback("sdfsdfsddfsd")
+                               })
+                        })
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+
+       
+        
+        
+            </script>
+        
+        
+    </body>
+</html>
