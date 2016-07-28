@@ -28,13 +28,13 @@ tags:
 1. 对于规模极小的团队，无服务器资源甚至缺少QA。Jenkins可以部署在开发者的电脑上，开发者正常
 自测完毕后提交代码推送tag触发自动打包，完成后自动上传蒲公英等平台并邮件通知各位去蒲公英平台
 下载。  
-   这种使用方式开发者只需要提交代码就ok，节省了开发者clean/build/upload/mailing的过程。
+&emsp;&emsp;这种使用方式开发者只需要提交代码就ok，节省了开发者clean/build/upload/mailing的过程。
 但缺点是编译的过程仍旧在开发者的电脑上，编译时电脑卡卡的。  
 
 2. 如果公司允许QA接触代码，那么可以在QA的电脑部署Jenkins，配置代码接入及编译环境，开发者
 推送代码后即可继续接下来的开发，由QA在自己电脑的Jenkins上完成打包、上传、通知等动作，QA还可
 以利用Jenkins Plugin配置直接进行自动化测试。  
-   这种方式已经解放了开发者，但是对QA的有一定的要求，需要QA了解自动化测试、编译环境配置等技术。  
+&emsp;&emsp;这种方式已经解放了开发者，但是对QA的有一定的要求，需要QA了解自动化测试、编译环境配置等技术。  
 
 3. 如果公司内有服务器资源，可以直接在服务器上配置Jenkins及编译环境。开发者推送代码后由服
 务器自动完成打包、代码检测、内测平台上传、邮件通知等一系列操作。开发者、QA、PM、客户们各取
@@ -51,13 +51,14 @@ tags:
 ### 成果  
 
   build结果页：
-  ![](https://github.com/tankcong/tankcong.github.io/blob/master/img/in-post/jenkins_build_status.jpeg)  
+  <img src="http://www.tankcong.com/img/in-post/jenkins_build_status.jpeg"/>  
+
 
   lint issues:
-  ![](https://github.com/tankcong/tankcong.github.io/blob/master/img/in-post/jenkins_lint_issues.jpeg)  
+  <img src="http://www.tankcong.com/img/in-post/jenkins_lint_issues.jpeg"/>  
 
   line report:
-  ![](https://github.com/tankcong/tankcong.github.io/blob/master/img/in-post/lint_report.jpeg)
+  <img src="http://www.tankcong.com/img/in-post/lint_report.jpeg"/>  
 
 
 ### Further Reading
