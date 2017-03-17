@@ -3,7 +3,7 @@
     "title": "聪记 | tankcong",
     "version": "1.0.0",
     "homepage": "http://tankcong.com",
-    "author": "Hux",
+    "author": "tankcong",
     "devDependencies": {
         "grunt": "~0.4.5",
         "grunt-contrib-less": "~0.11.4",

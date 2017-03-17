@@ -1,0 +1,500 @@
+cd build
+ls
+cd outputs/
+ls
+cd apk
+ls
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+cd ..
+ls
+cd apk
+adb install -r UCClient-debug.apk
+ls
+adb install -r UCClient-debug.apk
+adb shell
+cd /Users/cleopard/Dev/Github/IdeaProjects/ideaIC\-133\.193
+cd /Users/cleopard/Dev/Github/IdeaProjects/ideaIC\-133\.193
+ls
+cd Dev
+ls
+cd Projects/
+ls
+cd Android/
+ls
+cd .
+cd ..
+ls
+cd IdeaProject/
+ls
+ls
+ls
+cd ..
+ls
+ls
+rm -r IdeaProject/
+cd Android/
+ls
+cd WorkLifeIms/
+ls
+cd WorkLifeIms/
+ls
+cd UCClient
+ls
+gradle assembleDebug
+cd build
+cd outputs/
+cd apk
+ls
+adb install UCClient-debug.apk 
+ls
+ls
+cd /dev
+ls
+cd /
+ls
+cd Users/
+ls
+cd cleopard/
+ls
+cd Dev
+ls
+cd ..
+ls
+cd /
+ls
+cd etc
+ls
+cd ..
+ls
+cd VO
+cd Volumes/
+ls
+cd Disk0
+ls
+cd ..
+cd Disk1
+ls
+cd Dev
+ls
+cd Library/
+ls
+git clone https://github.com/lucasr/twoway-view.git
+ls
+mkdir Android-PullToRefresh-master/
+ls
+mkdir Android
+ls
+cd ..
+ls
+cd Library/
+ls
+mv Android-PullToRefresh-master/ Android/
+ls
+mv FilterMenu/ Android/
+mv twoway-view/ Android/
+ls
+ls
+cd Android/
+ls
+git clone https://github.com/daimajia/NumberProgressBar.git
+ls
+cd Dev
+ls
+cd Github/
+ls
+cd IdeaProjects/
+ls
+cd ideaIC-133.193/
+ls
+git init
+ls
+ls -a
+git status
+ls
+mvim .gitignore
+ls
+git status
+ls
+git add -a
+git add -A
+jls
+ls
+git log
+ls
+git status
+ls
+git reset
+git
+git log
+ls
+git status
+ls
+ls -a
+rm .git
+rm -rf .git
+ls
+rm -r .git
+rm -r -f .git
+ls
+git init
+ls
+ls -a
+rm -r -f .git
+ls -a
+git init
+ls
+git status
+git add -A
+git status
+ls
+git commit -m "init"
+git status
+ls
+git rm out
+ls
+git status
+git rm -r out
+ls
+mvim .gitignore 
+ls
+git status bin
+git add bin
+git commit -m "rm out dir"
+ls
+ls
+cd Pro
+ls
+cd Dev
+ls
+cd Projects/
+cd ..
+rm bug.log 
+ls
+cd Projects/
+ls
+cd Android/
+l
+ls
+cd WorkLifeIms
+ls
+d WorkLifeIms/
+ls
+cd WorkLifeIms/
+ls
+cd UCClient
+ls
+cd build
+ls
+cd outputs/
+ls
+cd apk
+ls
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+ls
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+ls
+ls
+cd ..
+ls
+cd apk
+ls
+adb install UCClient-debug.apk
+adb install UCClient-debug.apk
+ls
+ls
+cd dev
+ls
+cd ..
+ls
+cd Dev
+ls
+cd Projects/
+ls
+cd Android/
+ls
+cd WorkLifeIms/
+ls
+cd WorkLifeIms/
+ls
+cd UCClient
+ls
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle clean
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+adb shell
+/Users/cleopard/Library/Android/sdk/tools/draw9patch ; exit;
+/Users/cleopard/Library/Android/sdk/tools/draw9patch ; exit;
+ls
+cd Dev/Projects/Android/WorkLifeIms/WorkLifeIms/UCClient
+ls
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+ls
+cd Dev
+ls
+cd Projects/
+ls
+cd Android/
+ls
+cd WorkLifeIms/WorkLifeIms/UCClient/build/outputs//apk
+ls
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+ks
+ls
+cd Dev/Projects/Android/WorkLifeIms/WorkLifeIms/UCClient/build/outputs/apk/
+ls
+adb install -r UCClient-debug.apk
+ls
+cd Dev/Projects/Android/WorkLifeIms/WorkLifeIms/UCClient
+ls
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+ls
+ls
+gradle assembleDebug
+cd Dev/Projects/Android/WorkLifeIms/WorkLifeIms/UCClient/build/outputs/apk/
+ls
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+ls
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb uninstall com.hna.worklife
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+gradle cleanls
+ls
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+ls
+cd Dev
+ls
+cd Projects/
+ls
+cd Android/
+ls
+cd WorkLifeIms/
+ls
+cd WorkLifeIms/
+ls
+cd UCClient
+ls
+cd ls
+cd build
+ls
+cd outputs/
+ls
+cd apk
+ls
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+ls
+cd Dev
+ls
+cd Projects/
+ls
+cd Android/
+ls
+cd WorkLifeIms/
+ls
+cd WorkLifeIms/
+ls
+cd UCClient
+ls
+cd build/outputs/apk/
+ls
+adb install -r UCClient-debug.apk
+ls
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+ls
+cd ..
+ls
+cd ..
+ls
+cd 公文
+cd 公文签批/
+ls
+mvim feedback.txt
+ls
+cd ..
+ls
+adb install -r UCClient-debug.apk 
+ls
+cd WorkLifeIms/
+ls
+cd UCClient
+ls
+gradle assembleDebug
+ls
+cd build
+ls
+cd outputs/
+ls
+cd apk
+ls
+adb install -r UCClient-debug.apk
+adb install -r UCClient-debug.apk
+ls
+cd Dev
+ls
+cd Projects/
+ls
+cd Android/
+ls
+cd WorkLifeIms/
+ls
+cd WorkLifeIms/
+ls
+cd UCClient
+ls
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleDebug
+ls
+gradle assembleDebug
+gradle assembleDebug
+gradle assembleRelease
+gradle assembleRelease
+gradle assembleDebug
+ls
+ls
+ls
+cd DEv
+ls
+cd Projects/
+ls
+cd Android/
+ls
+cd WorkLifeIms/
+ls
+cd WorkLifeIms/
+ls
+cd UCClient
+ls
+gradle assembleDebug
+xcode-select --install
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
+brew list --versions
+ls
+ls
+ls
+cd P
+cd Dev
+ls
+cd Projects/
+ls
+cd Android/
+ls
+cd WorkLifeIms/
+ls
+cd w
+cd W 
+cd WorkLifeIms/
+ls
+cd UCClient
+l
+ls
+gradle assembleDebug
+ls
+cd ~
+ls
+cd Pr
+cd Dev/
+ls
+cd Projects/
+ls
+cd Android/
+ls
+cd ..
+cd ..
+ls
+cd Codes/
+ls
+cd Python/
+ls
+cd ProgrammingPearls/
+ls
+git status
+brew cask install qlmarkdown
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+cd ~
+mvim .gitignore
+cat .gitignore
+:q
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+chsh -s /bin/zsh
+ls
+pwd
+shsh -s /bin/zsh
+chsh -s /bin/zsh
+chsh -s /bin/zsh
+brew doctor
+brew update
+brew install caskroom/cask/brew-cask
